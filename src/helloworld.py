@@ -3,12 +3,8 @@ import pymysql
 #database connection
 connection = pymysql.connect(host="localhost", user="root", passwd="", database="test")
 cursor = connection.cursor()
-
-
-
-
-Drop_tbl = "Drop table IF EXISTS Artists "
-cursor.execute(Drop_tbl )
+create_tbl= "create table artists "
+cursor.execute(create_tbl)
 
 
 
@@ -16,6 +12,7 @@ cursor.execute(Drop_tbl )
 connection.commit()
 connection.close()
 print("end");
+print("hello")
     
         
     
