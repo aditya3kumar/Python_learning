@@ -1,15 +1,19 @@
 import pymysql
+import pymysql.cursors
 
 #database connection
-connection = pymysql.connect(host="localhost", user="root", passwd="", database="test")
-cursor = connection.cursor()
-select_tbl= "select * from tbl_employee "
-cursor.execute(select_tbl)
+def db_connect():
+
+    db = pymysql.connect(host="localhost", user="root", passwd="", database="test")
+
+    # prepare a cursor object using cursor() method
+    cursor = db.cursor()
+    print('test')
+    return cursor
 
 
 
-#commiting the connection then closing it.
-connection.commit()
-connection.close()
-print("end");
-print("hello")
+
+a=db_connect()
+print(a);
+
