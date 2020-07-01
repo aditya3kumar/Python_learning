@@ -6,14 +6,10 @@ def db_connect():
 
     db = pymysql.connect(host="localhost", user="root", passwd="", database="test")
 
-    # prepare a cursor object using cursor() method
-    cursor = db.cursor()
-    print('test')
-    return cursor
+    return db
 
 
 
 
-a=db_connect()
-print(a);
+
 
