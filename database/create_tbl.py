@@ -8,21 +8,19 @@ def db_createtbl(db):
 
 
     studentRecord = """CREATE TABLE tbl_employee1(  
-                   ID INT  NOT NULL,
+                   ID int AUTO_INCREMENT PRIMARY KEY,
                    NAME  VARCHAR(20) NOT NULL,  
                    Dept VARCHAR(50),  
-                   login VARCHAR(50), 
-                   status VARCHAR(5))"""
+                   status VARCHAR(10))"""
 
 
     validate_create=cursor.execute(studentRecord)
-    db_connect().commit()
+    db.commit()
 
-    print(validate_create)
     if validate_create==0 or validate_create==None :
-        print("Table not created")
-    else:
         print("Table created")
+    else:
+        print("Table not created")
 
-    print("----createtbl end---------")
-    return
+
+

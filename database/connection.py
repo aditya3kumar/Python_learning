@@ -13,7 +13,7 @@ def db_connect():
     else:
         print ("Connection not estblished")
 
-    print("----connect end----------")
+    print("----connection-------")
     return db
 
 
