@@ -1,10 +1,9 @@
-import pymysql
-from database.select import db_select
 from database.connection import db_connect
-from database.update import db_update
 from database.create_tbl import db_createtbl
-from database.insert import db_insert
 from database.delete import db_delete
+from database.insert import db_insert
+from database.select import db_select
+from database.update import db_update
 
 #CHANGE MASTER TO MASTER_HOST='127.0.0.1', MASTER_PORT=3306,MASTER_USER='aditya', MASTER_PASSWORD='aditya'
 
