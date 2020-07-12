@@ -1,36 +1,34 @@
 from database.connection import db_connect
-from database.create_tbl import db_createtbl
-from database.delete import db_delete
-from database.insert import db_insert
+from database.create_tbl import db_createtbl,db_create_validate
+from database.delete import db_delete,db_delete_validate
+from database.insert import db_insert,db_insert_validate
 from database.select import db_select
-from database.update import db_update
+from database.update import db_update,db_update_validate
 
-#CHANGE MASTER TO MASTER_HOST='127.0.0.1', MASTER_PORT=3306,MASTER_USER='aditya', MASTER_PASSWORD='aditya'
 
 print('--result--')
-# a=db_select()
-# print(a)
-# b=db_update()
-# print(b)
-# connection and validate
+
 connection=db_connect()
-# db_createtbl() and validate creation of table
-db_createtbl(connection)
 
-# insert records and validate insertion of records
+# ccreating table and validate creation of table
+validate_create=db_createtbl(connection)
+db_create_validate(validate_create)
 
-db_insert(connection)
-# Select records
-db_select(connection)
+# inserting records and validate insertion of records
+
+insert_val = db_insert(connection)
+db_insert_validate(insert_val)
 
 # update records and validate update of records
 
-db_update(connection)
+update_val=db_update(connection)
+db_update_validate(update_val)
 
 # Select records
 db_select(connection)
 # delete records and validate it
-db_delete(connection)
+delete_val=db_delete(connection)
+db_delete_validate(delete_val)
 # drop table and validate it
 
 # connection close

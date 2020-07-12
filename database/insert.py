@@ -6,6 +6,10 @@ def db_insert(db):
     insert_tbl='''INSERT INTO `tbl_employee1` (`NAME`, `DEPT`, `STATUS`) VALUES ('test2', 'IT', 'INACTIVE')'''
     insert_val=cursor.execute(insert_tbl)
     db.commit()
+    return insert_val
+
+
+def db_insert_validate(insert_val):
     if insert_val > 0:
         print("total no. of Record inserted:",insert_val)
     elif insert_val==None:
