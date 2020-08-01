@@ -1,15 +1,14 @@
 import pymysql
-
-#database connection
-connection = pymysql.connect(host="localhost", user="root", passwd="", database="test")
-cursor = connection.cursor()
-select_tbl= "select * from tbl_employee "
-cursor.execute(select_tbl)
+import pymysql.cursors
 
 
+# database connection
+def db_connect():
+    db = pymysql.connect(host="127.0.0.1", port=3306, user="root", password="", database="test")
+    if (db):
+        print("Connection established:", db)
+    else:
+        print("Connection not estblished")
 
-#commiting the connection then closing it.
-connection.commit()
-connection.close()
-print("end");
-print("hello")
+    print("----connection-------")
+    return db
