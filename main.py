@@ -10,25 +10,27 @@ print('--result--')
 
 connection=db_connect()
 
-# ccreating table and validate creation of table
+# # creating table and validate creation of table
 validate_create=db_createtbl(connection)
 db_create_validate(validate_create)
-
-# inserting records and validate insertion of records
-
+#
+ # inserting records and validate insertion of records
+#
 insert_val = db_insert(connection)
 db_insert_validate(insert_val)
-
-# update records and validate update of records
-
+#
+# # update records and validate update of records
+#
 update_val=db_update(connection)
 db_update_validate(update_val)
-
-# Select records
+#
+# # Select records
 db_select(connection)
-# delete records and validate it
+# # delete records and validate it
+#
 delete_val=db_delete(connection)
 db_delete_validate(delete_val)
+
 # drop table and validate it
 
 # connection close
