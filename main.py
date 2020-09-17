@@ -28,8 +28,8 @@ db_update_validate(update_val)
 db_select(connection)
 # # delete records and validate it
 #
-delete_val=db_delete(connection)
-db_delete_validate(delete_val)
+# delete_val=db_delete(connection)
+# db_delete_validate(delete_val)
 
 # drop table and validate it
 
