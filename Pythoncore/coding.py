@@ -2,7 +2,6 @@
 def find_long_subs(l1):
     first=l1[0]
     temp=[]
-    s=''
     for i,j in enumerate(first):
         s = ''
         for x in range(i,len(first)):
