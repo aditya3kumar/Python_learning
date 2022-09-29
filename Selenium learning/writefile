@@ -1,0 +1,20 @@
+
+#open the file
+with open('test.txt','r') as reader:
+
+    content=reader.readlines()# read the all content
+    print(content)              #print the content
+    with open('test.txt','w') as writer:   #open the file in write mode
+        i=len(content)
+        print(i)
+        for i in range(i-1,-1,-1): #  reverse mode in file
+            line= content[i]
+            print(line)
+            writer.write(line)   # writing in reverse mode
+
+
+
+
+
+
+
